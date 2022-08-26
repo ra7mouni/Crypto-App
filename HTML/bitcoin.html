@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Crypto_counter</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="../JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img src="../images/logo.png" alt="" class="logo">
+            <a class="navbar-brand" id="title" href="index.html">RYPTO_COUNTER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#price">Price</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cryptocurrencies
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="bitcoin.html">Bitcoin (BTC)</a></li>
+                  <li><a class="dropdown-item" href="ethereum.html">Ethereum (ETH)</a></li>
+                  <li><a class="dropdown-item" href="litecoin.html"> Litecoin (LTC)</a></li>
+                  <li><a class="dropdown-item" href="monero.html">Monero (XMR)</a></li>
+                  <li><a class="dropdown-item" href="dash.html">Dash (DASH)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="log-in.html">Log-in / sign-up</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        <div class="row">
+          <div class="col-8">
+               <script src="https://crypto.com/price/static/widget/index.js"></script>
+              <div id="crypto-widget-CoinTicker" data-design="classic" data-coin-ids="1"></div>
+           </div>
+           <div class="col-4 " id="converter">
+            <div style="width:380px">
+                <crypto-converter-widget
+                   live
+                   shadow
+                   symbol
+                   fiat="united-states-dollar"
+                   crypto="bitcoin"
+                   amount="1"
+                   border-radius="0.60rem"
+                   background-color="#FFFFFF"
+                   decimal-places="2"><a href="https://cr.today/" rel="noopener">Converter Widget</a></crypto-converter-widget>
+                <a href="https://co-w.io/">co-w.io</a>
+                <script src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget/dist/latest.min.js" async></script>
+              </div>
+           </div>
+        </div>
+        <div class="chart">
+            <script type="text/javascript">
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[scripts.length - 1];
+                var cccTheme = {
+                    "General": {
+                        "background": "#FFFFFF",
+                        "borderWidth": "0",
+                        "borderColor": "",
+                        "borderRadius": "0 0 0 0",
+                        "textColor": "#c2c5cc",
+                        "showExport": false
+                    },
+                    "Tabs": {
+                        "borderColor": "",
+                        "activeBorderColor": "#00A300"
+                    },
+                    "Chart": {
+                        "animation": true,
+                        "fillColor": "#052056",
+                        "borderColor": "#fff",
+                        "color": "#fff"
+                    },
+                    "Conversion": {
+                          "lineHeight": "18px",
+                        "color": "#052056"
+                    }
+                };
+                (function() {
+                    var appName = "Red Fog";
+                    
+                    var s = document.createElement("script");
+                    s.type = "text/javascript";
+                    s.async = true;
+                    var theUrl = baseUrl + 'serve/v3/coin/chart?fsym=BTC&tsyms=USD';
+                    s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                    embedder.parentNode.appendChild(s);
+                })();
+            </script>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob: android-webview-video-poster:; style-src * 'unsafe-inline';">
+    <title>Crypto-App</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img src="../images/logo.png" alt="" class="logo">
+            <a class="navbar-brand" id="title" href="#price">RYPTO_COUNTER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#price">Price</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cryptocurrencies
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="bitcoin.html">Bitcoin (BTC)</a></li>
+                  <li><a class="dropdown-item" href="ethereum.html">Ethereum (ETH)</a></li>
+                  <li><a class="dropdown-item" href="litecoin.html"> Litecoin (LTC)</a></li>
+                  <li><a class="dropdown-item" href="monero.html">Monero (XMR)</a></li>
+                  <li><a class="dropdown-item" href="dash.html">Dash (DASH)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="log-in.html">Log-in / sign-up</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <a name="price"></a>
+      <div class="container text-center">
+        <div class="row">           
+          <div class="col-8"> 
+            <h1 class="headers">Top Movers</h1>         
+            <script src="https://crypto.com/price/static/widget/index.js"></script>
+            <div id="crypto-widget-CoinMarquee" data-transparent="true"  data-design="modern" data-coin-ids="1,166,2,79,44" class="cryptocurrencies"></div></div>
+          <div class="col-4">
+            <div class="stream">
+                <h5>Cryptocurrencies improvement</h5>
+                <!-- Cryptocurrency Price Widget --><script>!function(){var e=document.getElementsByTagName("script"),t=e[e.length-1],n=document.createElement("script");function r(){var e=crCryptocoinPriceWidget.init({base:"USD,EUR,CNY,GBP",items:"BTC,ETH,LTC,XMR,DASH",backgroundColor:"FFFFFF",streaming:"1",rounded:"1",boxShadow:"1",border:"1"});t.parentNode.insertBefore(e,t)}n.src="https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CXMR%2CDASH",n.async=!0,n.readyState?n.onreadystatechange=function(){"loaded"!=n.readyState&&"complete"!=n.readyState||(n.onreadystatechange=null,r())}:n.onload=function(){r()},t.parentNode.insertBefore(n,null)}();</script><a href="https://currencyrate.today/">Currency Converter</a><!-- /Cryptocurrency Price Widget -->
+             </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="headers1">Today's Cryptocurrency Prices</h1>
+      <div class="cryptotable">
+        <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>24h %</th>
+                <th>24h Volume</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span id="btcLogo"></span></td>
+                <td><strong>Bitcoin (BTC)</strong> 
+                <td><span id="btcPrice">...loading...</span></td>
+                <td><span id="btcChange">...loading...</span></td>
+                <td><span id="btcVol">...loading...</span></td>
+                <td><span id="btcCap">...loading...</span></td>
+              </tr>
+              <tr>
+                <td><span id="ethLogo"></span></td>
+                <td><strong>Ethereum (ETH)</strong> 
+                <td><span id="ethPrice">...loading...</span></td>
+                <td><span id="ethChange">...loading...</span></td>
+                <td><span id="ethVol">...loading...</span></td>
+                <td><span id="ethCap">...loading...</span></td>
+              </tr>
+              <tr>
+                <td><span id="dogeLogo"></span></td>
+                <td><strong>Litecoin (LTC)</strong> 
+                <td><span id="dogePrice">...loading...</span></td>
+                <td><span id="dogeChange">...loading...</span></td>
+                <td><span id="dogeVol">...loading...</span></td>
+                <td><span id="dogeCap">...loading...</span></td>
+              </tr>
+              <tr>
+                <td><span id="xrpLogo"></span></td>
+                <td><strong>Monero (XMR)</strong> 
+                <td><span id="xrpPrice">...loading...</span></td>
+                <td><span id="xrpChange">...loading...</span></td>
+                <td><span id="xrpVol">...loading...</span></td>
+                <td><span id="xrpCap">...loading...</span></td>
+              </tr>
+              <tr>
+                <td><span id="shibLogo"></span></td>
+                <td><strong>Dash (Dash)</strong> 
+                <td><span id="shibPrice">...loading...</span></td>
+                <td><span id="shibChange">...loading...</span></td>
+                <td><span id="shibVol">...loading...</span></td>
+                <td><span id="shibCap">...loading...</span></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+      <script src="../JS/main.js"></script>
+</body>
+</html>
